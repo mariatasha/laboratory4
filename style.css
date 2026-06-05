@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1e1e24;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Calculator Layout */
+.calculator-container {
+    background-color: #000;
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+
+/* Screen Styling */
+.screen {
+    background-color: #222;
+    color: #00ff66;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-family: monospace;
+    border: 1px solid #333;
+}
+
+/* Buttons Grid */
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+/* Interactive Button Hover/Active Effects */
+.btn:hover {
+    background-color: #444;
+    transform: scale(1.03);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Specific Button Colors */
+.operator {
+    background-color: #ff9f0a;
+}
+.operator:hover { background-color: #ffb23e; }
+
+.clear {
+    background-color: #ff3b30;
+}
+.clear:hover { background-color: #ff5950; }
+
+.equals {
+    background-color: #00ff66;
+    color: #000;
+    font-weight: bold;
+}
+.equals:hover { background-color: #33ff88; }
+
+/* Dynamic Layout Spans */
+.tall {
+    grid-row: span 2;
+}
+.zero {
+    grid-column: span 2;
+}
+
+/* Responsiveness Guide Section */
+.user-guide {
+    max-width: 360px;
+    background: #2a2a35;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #ff9f0a;
+}
+
+.user-guide h2, .user-guide h3 {
+    margin-bottom: 10px;
+    color: #ff9f0a;
+}
+
+.user-guide ul {
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+.user-guide li {
+    margin-bottom: 5px;
+}

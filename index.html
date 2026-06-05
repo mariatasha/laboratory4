@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCIT 26 - Calculator Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="calculator-container">
+        <!-- Display Screen -->
+        <div class="screen" id="display">0</div>
+
+        <!-- Buttons Grid -->
+        <div class="buttons-grid">
+            <!-- Row 1 -->
+            <button class="btn clear" onclick="clearDisplay()">C</button>
+            <button class="btn operator" onclick="appendOperator('/')">&divide;</button>
+            <button class="btn operator" onclick="appendOperator('*')">&times;</button>
+            <button class="btn operator" onclick="appendOperator('-')">&minus;</button>
+
+            <!-- Row 2 -->
+            <button class="btn" onclick="appendNumber('7')">7</button>
+            <button class="btn" onclick="appendNumber('8')">8</button>
+            <button class="btn" onclick="appendNumber('9')">9</button>
+            <button class="btn operator tall" onclick="appendOperator('+')">+</button>
+
+            <!-- Row 3 -->
+            <button class="btn" onclick="appendNumber('4')">4</button>
+            <button class="btn" onclick="appendNumber('5')">5</button>
+            <button class="btn" onclick="appendNumber('6')">6</button>
+
+            <!-- Row 4 -->
+            <button class="btn" onclick="appendNumber('1')">1</button>
+            <button class="btn" onclick="appendNumber('2')">2</button>
+            <button class="btn" onclick="appendNumber('3')">3</button>
+            <button class="btn equals tall" onclick="calculate()">=</button>
+
+            <!-- Row 5 -->
+            <button class="btn zero" onclick="appendNumber('0')">0</button>
+            <button class="btn" onclick="appendNumber('.')">.</button>
+        </div>
+    </main>
+
+    <!-- Instructions / User Guide Section -->
+    <section class="user-guide">
+        <h2>Calculator User Guide</h2>
+        <p><strong>Supported Operations:</strong> Addition (+), Subtraction (-), Multiplication (&times;), Division (&divide;)</p>
+        <h3>How to use:</h3>
+        <ul>
+            <li>Click the on-screen buttons or use your computer keyboard numpad.</li>
+            <li>Press <strong>C</strong> or the <strong>Backspace/Escape</strong> key to clear the display.</li>
+            <li>Press <strong>=</strong> or the <strong>Enter</strong> key to execute calculations dynamically.</li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
